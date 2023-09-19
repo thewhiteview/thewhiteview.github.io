@@ -1,1 +1,0 @@
-# thewhiteview.github.io
