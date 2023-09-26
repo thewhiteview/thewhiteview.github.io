@@ -31,52 +31,7 @@
 </head>
 <body>
 
-	<div class="site-mobile-menu site-navbar-target">
-		<div class="site-mobile-menu-header">
-			<div class="site-mobile-menu-close">
-				<span class="icofont-close js-menu-toggle"></span>
-			</div>
-		</div>
-		<div class="site-mobile-menu-body"></div>
-	</div>
-
-	<nav class="site-nav">
-		<div class="container">
-			<div class="site-navigation">
-				<a href="index.html" class="logo m-0 float-start">The White View <span class="text-primary">Pyeongchang</span></a>
-
-				<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-start">
-					<li class="active"><a href="index.html">Home</a></li>
-					<li class="has-children">
-						<a href="projects.html">Rooms</a>
-						<ul class="dropdown">
-							<li><a href="#">Commercial Building</a></li>
-							<li><a href="#">Cultural Lifestyle</a></li>
-							<li class="has-children">
-								<a href="#">Dropdown</a>
-								<ul class="dropdown">
-									<li><a href="#">Sub Menu One</a></li>
-									<li><a href="#">Sub Menu Two</a></li>
-									<li><a href="#">Sub Menu Three</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li><a href="services.html">Services</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
-				</ul>
-
-				<a href="#" class="burger ml-auto float-end site-menu-toggle light js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
-					<span></span>
-				</a>
-				<ul class="site-menu float-end d-none d-md-block">
-					<li><a href="#" class="d-flex align-items-center text-white h2 fw-bold"><span class="icon-phone me-2"></span> <span>033 333 7878</span></a></li>
-				</ul>
-
-			</div>
-		</div>
-	</nav>
+	<div id="navbar"></div>
 
 	<div class="hero-2 overlay" style="background-image: url('images/img_2.jpg');">
 		<div class="container">
@@ -235,7 +190,7 @@
 		<div class="container">
 			<div class="row mb-5">
 				<div class="col-lg-6">
-					<h2 class="heading">Projects</h2>
+					<h2 class="heading">Rooms</h2>
 				</div>
 				<div class="col-lg-4">
 					<p>Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium, quam odio ipsum veritatis est maiores velit quasi blanditiis et natus accusamus itaque.</p>
@@ -312,7 +267,7 @@
 				</div>
 
 				<div class="col-md-12 text-center mt-5">
-					<p><a href="#" class="btn btn-primary me-4">See all projects</a></p>
+					<p><a href="rooms.html" class="btn btn-primary me-4">See all rooms</a></p>
 				</div>
 
 			</div>
@@ -564,17 +519,7 @@
 	<script src="js/navbar.js"></script>
 	<script src="js/counter.js"></script>
 	<script src="js/custom.js"></script>
+	<script src="js/thewhiteview.js"></script>
 
-	<script>
-        var externalHTMLUrl = '/footer.html';
-
-        window.onload = function () {
-            fetch(externalHTMLUrl)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer').innerHTML = data;
-                })
-        };
-	</script>
 </body>
 </html>
