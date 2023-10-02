@@ -6,11 +6,12 @@
 */ -->
 <!doctype html>
 <html lang="ko">
+
 <head>
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+
 	<meta name="author" content="Untree.co">
 	<link rel="shortcut icon" href="favicon.png">
 
@@ -18,7 +19,8 @@
 	<meta name="keywords" content="호텔, 평창 호텔" />
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap"
+		rel="stylesheet">
 
 	<link rel="stylesheet" href="fonts/icomoon/style.css">
 	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
@@ -29,6 +31,7 @@
 
 	<title>평창 더 화이트 뷰</title>
 </head>
+
 <body>
 
 	<div class="site-mobile-menu site-navbar-target">
@@ -40,49 +43,14 @@
 		<div class="site-mobile-menu-body"></div>
 	</div>
 
-	<nav class="site-nav">
-		<div class="container">
-			<div class="site-navigation">
-				<a href="index.html" class="logo m-0 float-start">The White View <span class="text-primary">Pyeongchang</span></a>
-
-				<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-start">
-					<li class="active"><a href="index.html">Home</a></li>
-					<li class="has-children">
-						<a href="projects.html">Rooms</a>
-						<ul class="dropdown">
-							<li><a href="#">Commercial Building</a></li>
-							<li><a href="#">Cultural Lifestyle</a></li>
-							<li class="has-children">
-								<a href="#">Dropdown</a>
-								<ul class="dropdown">
-									<li><a href="#">Sub Menu One</a></li>
-									<li><a href="#">Sub Menu Two</a></li>
-									<li><a href="#">Sub Menu Three</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li><a href="services.html">Services</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
-				</ul>
-
-				<a href="#" class="burger ml-auto float-end site-menu-toggle light js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
-					<span></span>
-				</a>
-				<ul class="site-menu float-end d-none d-md-block">
-					<li><a href="tel:033-333-7878" class="d-flex align-items-center text-white h2 fw-bold"><span class="icon-phone me-2"></span> <span>033 333 7878</span></a></li>
-				</ul>
-
-			</div>
-		</div>
-	</nav>
+	<div id="navbar"></div>
 
 	<div class="hero-2 overlay" style="background-image: url('images/exterior/exterior_upscale.jpg');">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-5 mx-auto">
-					<h1 class="mb-5"><span>Hotel</span> <span class="d-block">The White View</span> <span class="d-block text-primary">Pyeongchang</span></h1>
+					<h1 class="mb-5"><span>Hotel</span> <span class="d-block">The White View</span> <span
+							class="d-block text-primary">Pyeongchang</span></h1>
 					<!-- 영상 재생 버튼인데 없으니 일단 비활성화 해둠 -->
 					<!-- <div class="play-vid">
 						<a href="https://www.youtube.com/watch?v=mwtbEGNABWU" class="play glightbox">
@@ -566,15 +534,23 @@
 	<script src="js/custom.js"></script>
 
 	<script>
-        var externalHTMLUrl = '/footer.html';
+		var footerHTMLUrl = '/footer.html';
+		var navbarHTMLUrl = '/navbar.html';
 
-        window.onload = function () {
-            fetch(externalHTMLUrl)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer').innerHTML = data;
-                })
-        };
+		window.onload = function () {
+			fetch(footerHTMLUrl)
+				.then(response => response.text())
+				.then(data => {
+					document.getElementById('footer').innerHTML = data;
+				});
+			fetch(navbarHTMLUrl)
+				.then(response => response.text())
+				.then(data => {
+					document.getElementById('navbar').innerHTML = data;
+					document.getElementById('home').classList.add('active');
+				});
+		};
 	</script>
 </body>
+
 </html>
